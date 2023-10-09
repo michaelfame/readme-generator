@@ -2,6 +2,8 @@ const fs = require("fs");
 const path = require('path');
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
+const util = require('util');
+const writeFileAsync = util.promisify(fs.writeFile);``
 
 // array of questions for user
 const questions = [
@@ -13,7 +15,7 @@ const questions = [
       {
         type: 'input',
         name: 'github',
-        message: 'Where What is your Github User id?'
+        message: 'Where What is your Github User id? '
       },
       {
         type: 'input',
@@ -52,22 +54,32 @@ const questions = [
       {
         type: 'input',
         name: 'contributing',
-        message: 'What does the user needs to know in order to contribute to this REPO? '
+        message: 'What user knowledge is needed in order to contribute to this REPO? '
       }
     ];
   
+
+
   const generateHTML = (answers) =>
 
-;
 
 // function to write README file
-function writeToFile(fileName, data) {
+function writeFileAsync(fileName, data) {
+    return fs.writeFileAsync(path.join(process.cwd(), fileName), data);
+    
 }
 
 // function to initialize program
 function init() {
+    inquirer.prompt(questions).then((Response) => {
+        console.log(`Readme being Generated...`);
+        writeFileAsync('README.md', generateMarkdown({...Response}))
+        })
+    }
+               
 
-}
+        
+ 
 
 // function call to initialize program
 init();
