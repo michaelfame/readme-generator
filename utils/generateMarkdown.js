@@ -14,19 +14,12 @@ const renderLinkToLicense = (license) => {
   return "";
   };
 
-
-
-
-
-
-
-
-
-
+// Creating the layout for the Readme Page and including all neccessary links and headings.
 function generateMarkdown(data) {
   return `# ${data.title}
   ${renderLicenseBadge(data.license)}
 
+  
   ### Description
   ${data.description}
 
@@ -75,12 +68,7 @@ function generateMarkdown(data) {
   
   You can also email me directly at ${data.email}.
 
-
   
-  
-
-
-
 `;
 }
 

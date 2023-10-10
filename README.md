@@ -1,8 +1,9 @@
-# readme-generator
+# Readme-Generator
   ![MIT](https://img.shields.io/badge/MIT-blueviolet)
 
+  
   ### Description
-  using nodejs to create a readme file through the CLI
+  Using Nodejs to create a readme file through the CLI. This will make providing the Readme markup file faster.
 
   ### Table Of Content
 
@@ -27,7 +28,7 @@
   !*!*!*
 
   ## Usage
-  node version higher than 16, all npm dependencies must be installed
+  nodejs must be installed in order to run this program. all the npm dependecies too.
 
   ## License
   
@@ -47,13 +48,8 @@
 
   ### Questions
   If you have any questions about the repo or want to open a issue, please contact me 
-  at my GitHub account at https://github.com/undefined. 
+  at my GitHub account at https://github.com/michaelfame. 
   
   You can also email me directly at michaelfame@gmail.com.
 
-
   
-  
-
-
-

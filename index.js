@@ -58,7 +58,7 @@ const questions = [
       }
     ];
   
-
+// variable to store the answers
 
   const generateHTML = (answers) =>
 
@@ -77,9 +77,6 @@ function init() {
         })
     }
                
-
-        
- 
-
-// function call to initialize program
+   
+ // function call to initialize program
 init();
